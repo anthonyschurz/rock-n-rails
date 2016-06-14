@@ -1,0 +1,9 @@
+<h1>Rock 'n Rails!</h1>
+<% @records.each do |record| %>
+  <p>Title: <%= record.title %></p>
+  <p>Artist: <%= record.artist %></p>
+  <img src="<%= record.cover_art %>">
+  <br>
+  <!-- anchor tag that links to a show page -->
+  <%= link_to "Show page", records_path(record) %>       <!-- good -->
+<% end %>
